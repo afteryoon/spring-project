@@ -1,0 +1,2 @@
+### GET ALL BOOKS
+GET localhost:8080/api/books

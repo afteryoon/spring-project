@@ -1,0 +1,44 @@
+
+### Create a new article
+POST http://localhost:8080/api/articles
+Content-Type: application/json
+
+{
+  "title": "blog title",
+  "content": "blog content"
+}
+
+### 전체 조회
+GET http://localhost:8080/api/articles
+
+### 단건 조회
+@id=1
+GET http://localhost:8080/api/articles/{{id}}
+
+### 단건 삭제
+DELETE http://localhost:8080/api/articles/{{id}}
+
+### 수정
+PUT http://localhost:8080/api/articles/{{id}}
+Content-Type: application/json
+
+{
+  "title": "blog title2",
+  "content": "blog content2"
+}
+
+### 외부 api 호출
+GET http://localhost:8080/api/external
+
+### 외부 api  insert comment
+GET  http://localhost:8080/api/external/comments
+
+
+### Create a new Comment
+POST http://localhost:8080/api/comments
+Content-Type: application/json
+
+{
+  "articleId": 1,
+  "body": "댓글 추가"
+}
