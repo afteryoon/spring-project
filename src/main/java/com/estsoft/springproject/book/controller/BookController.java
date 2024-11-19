@@ -25,6 +25,13 @@ public class BookController {
         return ResponseEntity.ok(bookList);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<BookResponse> getBookById(@PathVariable Long id) {
+        Book book = bookService.findBy(id);
+
+        return ResponseEntity.ok(new BookResponse(book));
+    }
+
     // book create
     @PostMapping()
     public ResponseEntity<BookResponse> addBook(@RequestParam String author, @RequestParam String name) {
