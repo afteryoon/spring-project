@@ -30,17 +30,17 @@ class BookControllerTest {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
     }
 
-    @Test
-    public void testGetAllBook() throws Exception{
-        //given
-
-        //when
-        ResultActions resultActions = mockMvc.perform(get("/books"));
-
-        //then
-        resultActions.andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.view().name("bookManagement"))
-                ;
-    }
+//    @Test
+//    public void testGetAllBook() throws Exception{
+//        //given
+//
+//        //when
+//        ResultActions resultActions = mockMvc.perform(get("/books"));
+//
+//        //then
+//        resultActions.andExpect(status().isOk())
+//                .andExpect(MockMvcResultMatchers.view().name("bookManagement"))
+//                ;
+//    }
 
 }

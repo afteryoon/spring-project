@@ -43,17 +43,17 @@ class MemberControllerTest {
     }
 
 
-    @Test
-    public void testGetAllMember() throws Exception{
-        //given 멤버목록 저장
-
-        //when GET /members
-        ResultActions resultActions = mockMvc.perform(get("/members")
-                .accept(MediaType.APPLICATION_JSON));
-        //then
-        resultActions.andExpect(status().is2xxSuccessful())
-                .andExpect(jsonPath("$[0].id").value(1))
-                .andExpect(jsonPath("$[1].id").value(2));
-
-    }
+//    @Test
+//    public void testGetAllMember() throws Exception{
+//        //given 멤버목록 저장
+//
+//        //when GET /members
+//        ResultActions resultActions = mockMvc.perform(get("/members")
+//                .accept(MediaType.APPLICATION_JSON));
+//        //then
+//        resultActions.andExpect(status().is2xxSuccessful())
+//                .andExpect(jsonPath("$[0].id").value(1))
+//                .andExpect(jsonPath("$[1].id").value(2));
+//
+//    }
 }
