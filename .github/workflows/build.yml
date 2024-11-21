@@ -18,8 +18,8 @@ on:
 env:
   S3_BUCKET_NAME: afteryoons-bucket
   AWS_REGION: ap-northeast-2
-  CODEDEPLOY_NAME: app-deploy
-  CODEDEPLOY_GROUP: app-deploy-group
+  CODEDEPLOY_NAME: github-actions
+  CODEDEPLOY_GROUP: yoon-github-actions-group
 
 jobs:
   build:
